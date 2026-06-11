@@ -574,11 +574,11 @@ public class DataSeeder implements CommandLineRunner {
                 .imageUrl("https://images.unsplash.com/photo-1558431382-27e303142255?w=400").city(kolkata).build());
         hotelRepository.save(Hotel.builder().name("The Oberoi Grand").type("5 Star Heritage").nearPlace("Park Street")
                 .rating(4.8).pricePerNight(12000).amenities("WiFi,Pool,Spa,Restaurant,Heritage")
-                .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(kolkata).build());
+                .imageUrl("https://imgs.search.brave.com/33vrKBKbOMdKMHE620nukDRxR_-DNsU-tDybymhimBk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZi5i/c3RhdGljLmNvbS94/ZGF0YS9pbWFnZXMv/aG90ZWwvbWF4NTAw/LzQ2NDMzMDY3Lmpw/Zz9rPTVmMDNiYjdm/ZmJhM2I4ZTk3MzNm/ZjIzNGQ3N2E2ZDQ3/ZTEzNjNmOGY3ZWIx/ZWI0Y2NjZGUwN2Rl/Y2NmYTMyMzAmbz0m/aHA9MQ").city(kolkata).build());
         foodRepository.save(Food.builder().name("Rosogolla").price(60).isVeg(true).rating(4.7)
                 .description("Spongy cottage cheese balls soaked in sugar syrup — Bengal's gift to the world")
                 .category("Sweet").restaurant("K.C. Das").priceRange("₹50-100").mustTry(true)
-                .imageUrl("https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400").city(kolkata).build());
+                .imageUrl("https://imgs.search.brave.com/EItOF7x8VQK5Plb3gr7AsBcymP8hSsxWsfZkQEJ-HAM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9ibG9n/Z2VyLmdvb2dsZXVz/ZXJjb250ZW50LmNv/bS9pbWcvYi9SMjl2/WjJ4bC9BVnZYc0Vn/U09COS1ITnRiVTV1/TGhlNVJlSHcxbElX/YzRZR3pqOEU1YTNG/dWFiN2JpQ0FsdXpX/Q2pHbDF5blVhbkQ5/RUVwbWdVVmJmVENL/c1RDQ3hSZmVwbVB4/ZlhzR3hTS1RWTTN5/b1JHZ2ZIOExuaFVH/ZkJLbHBaM1FwQU1r/SGlpaEo0VDdubUZL/cFEyV0FyM3FxL3M4/MDAvcm9zb2dvbGxh/Mi5qcGc").city(kolkata).build());
 
         // --- Hyderabad ---
         City hyderabad = cityRepository.save(City.builder().name("Hyderabad").state("Telangana")
@@ -592,11 +592,11 @@ public class DataSeeder implements CommandLineRunner {
         placeRepository.save(Place.builder().name("Charminar")
                 .description("Iconic 16th-century mosque with four grand arches — symbol of Hyderabad")
                 .category("Monument").rating(4.6).timings("9:30AM-5:30PM").entryFee("₹25")
-                .imageUrl("https://images.unsplash.com/photo-1572613286766-4992cdea1744?w=400").city(hyderabad)
+                .imageUrl("https://imgs.search.brave.com/mY-l_ce6xu4f5Fe7C0LYGPjwZ2o1dDxAlz5U8qEpFaI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9oeWRl/cmFiYWR0b3VycGFj/a2FnZS5pbi9pbWFn/ZXMvcGxhY2VzLXRv/LXZpc2l0L2NoYXJt/aW5hci1oeWRlcmFi/YWQtZW50cnlmZWUt/dGltaW5ncy10b3Vy/LXBhY2thZ2UtaGVh/ZGVyLmpwZw").city(hyderabad)
                 .build());
         hotelRepository.save(Hotel.builder().name("Taj Falaknuma Palace").type("5 Star Heritage").nearPlace("Charminar")
                 .rating(4.9).pricePerNight(28000).amenities("WiFi,Pool,Spa,Restaurant,Heritage")
-                .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(hyderabad)
+                .imageUrl("https://imgs.search.brave.com/PX1n9bF51B4DMCYaWP9VRywebqx-DvYqjQfX3unWtkE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9oZWxs/b2h5ZGVyYWJhZC5v/cmcvd3AtY29udGVu/dC91cGxvYWRzLzIw/MjQvMDcvVW50aXRs/ZWQtZGVzaWduLTQt/MS5qcGc").city(hyderabad)
                 .build());
         foodRepository.save(Food.builder().name("Hyderabadi Biryani").price(280).isVeg(false).rating(4.9)
                 .description("Slow-cooked dum biryani with aromatic spices — rated world's best rice dish")
@@ -618,12 +618,12 @@ public class DataSeeder implements CommandLineRunner {
                 .build());
         hotelRepository.save(Hotel.builder().name("Suryagarh Jaisalmer").type("5 Star").nearPlace("Sam Sand Dunes")
                 .rating(4.8).pricePerNight(15000).amenities("WiFi,Pool,Spa,Restaurant,Heritage")
-                .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(jaisalmer)
+                .imageUrl("https://imgs.search.brave.com/LhhQLfPQp31ExOJR2yCUAq25RlSk9aN4MzRhmoXQ_YE/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/bXlldmVudHouY28u/aW4vcHVibGljL3Vw/bG9hZHMvdmVudWVf/MjgzL3Jvb21zXzAv/U3VyeWFnYXJoJTIw/SmFpc2FsbWVyJTIw/VGhhciUyMEhhdmVs/aS5qcGc").city(jaisalmer)
                 .build());
         foodRepository.save(Food.builder().name("Ker Sangri").price(200).isVeg(true).rating(4.4)
                 .description("Traditional desert vegetable dish made from indigenous desert beans and berries")
                 .category("Main Course").restaurant("Desert Boy's Dhani").priceRange("₹150-300").mustTry(true)
-                .imageUrl("https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400").city(jaisalmer)
+                .imageUrl("https://imgs.search.brave.com/0iAlSggxqm5Idk-7V_OJOdIUDarKXmLNun2OFwFjozo/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/Zm9vZGllLXRyYWls/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyMS8xMS8yMDIx/MTEwM18xNDQ3NDI4/ODRfaU9TLXNjYWxl/ZC5qcGc").city(jaisalmer)
                 .build());
 
         // --- Ooty ---
@@ -631,14 +631,14 @@ public class DataSeeder implements CommandLineRunner {
                 .description(
                         "Enchanting hill station with tea plantations, botanical gardens, and the iconic Nilgiri Mountain Railway.")
                 .category("Mountain").rating(4.5).bestTime("Oct-Jun").language("Tamil, English")
-                .imageUrl("https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=800").build());
+                .imageUrl("https://imgs.search.brave.com/Ddbvbe9YveCwfbw4yxXLAHxhmtffN2mtoC-zovpKMLs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTYy/MzMxODExL3Bob3Rv/L2F2YWxhbmNoZS1s/YWtlLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1DRElQQlFG/bGdVVHBaT1hDaXRC/WE1iVGJsd0FkdDFq/YWl3am5wUlpYQk5R/PQ").build());
         placeRepository.save(Place.builder().name("Ooty Botanical Gardens")
                 .description("150-year-old gardens with 650+ plant species including a 20-million-year-old fossil tree")
                 .category("Nature").rating(4.5).timings("8AM-6:30PM").entryFee("₹30")
-                .imageUrl("https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=400").city(ooty).build());
+                .imageUrl("https://imgs.search.brave.com/E73M53O-EbI4E40hIcv9OHS152FbKMIAOM3CzAj4kbg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9j/L2MxL0JvdGFuaWNh/bF9HYXJkZW5zXy1f/T290YWNhbXVuZF8o/T290eSlfLV9JbmRp/YV8wMy5KUEc").city(ooty).build());
         hotelRepository.save(Hotel.builder().name("Savoy IHCL").type("5 Star Heritage").nearPlace("Botanical Gardens")
                 .rating(4.6).pricePerNight(9000).amenities("WiFi,Restaurant,Heritage,Fireplace")
-                .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(ooty).build());
+                .imageUrl("https://imgs.search.brave.com/I6jRkrz8v-OngGp887eKLpZtJNQSpSMZdP9cXtIyoxs/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9jZi5i/c3RhdGljLmNvbS94/ZGF0YS9pbWFnZXMv/aG90ZWwvbWF4MTIw/MC8yNTQxNzI0NzEu/anBnP2s9MzVkNmE4/ZjNlNjVjYTQwNzVk/YjViMWFlMTI2MzA1/ODQzNzBiMTRlNzhk/OGM5NDUyMGYwNmJm/NDA0MzY3NGZhYyZv/PQ").city(ooty).build());
         foodRepository.save(Food.builder().name("Ooty Chocolate").price(250).isVeg(true).rating(4.5)
                 .description("Handcrafted artisan chocolate made from Nilgiri cocoa — famous hill station souvenir")
                 .category("Sweet").restaurant("King Star Chocolate").priceRange("₹100-500").mustTry(true)
@@ -654,16 +654,16 @@ public class DataSeeder implements CommandLineRunner {
         placeRepository.save(Place.builder().name("Promenade Beach")
                 .description("1.5km seafront walkway lined with colonial buildings, statues, and cafes")
                 .category("Beach").rating(4.5).timings("24 Hours").entryFee("Free")
-                .imageUrl("https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400").city(pondicherry)
+                .imageUrl("https://imgs.search.brave.com/5dbvSpCFi_pGC5IqLpgeVI41q8njyPDSDr4HJlMuxXw/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly92aXNp/dHBsYWNlc2luZGlh/LmNvbS93cC1jb250/ZW50L3VwbG9hZHMv/MjAyNC8xMS9wcm9t/ZW5hZGUtYmVhY2gt/cHVkdWNoZXJyeS5q/cGc").city(pondicherry)
                 .build());
         hotelRepository.save(Hotel.builder().name("Palais de Mahe").type("4 Star Boutique").nearPlace("Promenade Beach")
                 .rating(4.6).pricePerNight(7000).amenities("WiFi,Pool,Restaurant,Heritage")
-                .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(pondicherry)
+                .imageUrl("https://imgs.search.brave.com/ncSYWEpUe6hQ4Z39InPU_NKk07CfmXmFgfZwZx3hR1E/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2NvdHRkdW5u/LmNvbS9jX2ZpbGws/Zl9hdXRvLHFfYXV0/byxoXzkwMCx3XzEz/NTAvaW5kaWEvYWNj/b21tb2RhdGlvbi9w/YWxhaXMtZGUtbWFo/ZS83MzA1NjAtY29y/cmlkb3ItcGFsYWlz/LWRlLW1haGUtdGFt/aWwtbmFkdS1pbmRp/YS1pbmRpYW4tc3Vi/LWNvbnRpbmVudC1h/c2lhLmpwZWc").city(pondicherry)
                 .build());
         foodRepository.save(Food.builder().name("Pondicherry Filter Coffee").price(50).isVeg(true).rating(4.6)
                 .description("Strong South Indian filter coffee with French twist — served in colonial cafes")
                 .category("Drink").restaurant("Cafe des Arts").priceRange("₹30-80").mustTry(true)
-                .imageUrl("https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400").city(pondicherry)
+                .imageUrl("https://imgs.search.brave.com/jbZW-J_A21f7O3S9B05oYIzcVEOJmBJAs4H_Bz2SGes/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS1w/aG90by9pbmRpYW4t/ZmlsdGVyLWNvZmZl/ZS1zZXJ2ZWQtYnJh/c3MtMjYwbnctMTMx/NTk2OTQ2Ni5qcGc").city(pondicherry)
                 .build());
 
         // --- Leh-Ladakh ---
