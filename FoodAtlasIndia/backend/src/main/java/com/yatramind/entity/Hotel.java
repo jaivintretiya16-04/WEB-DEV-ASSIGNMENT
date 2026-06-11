@@ -24,6 +24,7 @@ public class Hotel {
 
     private Integer pricePerNight;
 
+    @Column(length = 2048)
     private String imageUrl;
 
     private String amenities; // comma-separated: WiFi,Pool,Spa,Restaurant

@@ -27,6 +27,7 @@ public class Food {
 
     private Integer price; // exact price for ordering
 
+    @Column(length = 2048)
     private String imageUrl;
 
     private Boolean mustTry;

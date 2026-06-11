@@ -32,6 +32,7 @@ public class City {
 
     private String language;
 
+    @Column(length = 2048)
     private String imageUrl;
 
     @OneToMany(mappedBy = "city", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

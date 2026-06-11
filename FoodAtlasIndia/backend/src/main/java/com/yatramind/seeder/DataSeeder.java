@@ -445,17 +445,17 @@ public class DataSeeder implements CommandLineRunner {
                 Place.builder().name("Laxman Jhula")
                         .description("Iconic 137m suspension bridge over the Ganges, surrounded by temples")
                         .category("Landmark").rating(4.6).timings("24 Hours").entryFee("Free")
-                        .imageUrl("https://images.unsplash.com/photo-1592385391255-8b58d0e70921?w=400").city(rishikesh)
+                        .imageUrl("https://imgs.search.brave.com/o5aZWBR4ApTdijUKky45f1kxFsCKYc_nn-TKOTxfY7g/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2hhcmRoYW10b3Vy/LmluL2Jsb2cvd3At/Y29udGVudC91cGxv/YWRzLzIwMjAvMDEv/TGF4bWFuLUpodWxh/LVJpc2hpa2VzaC5q/cGc").city(rishikesh)
                         .build(),
                 Place.builder().name("Beatles Ashram").description(
                         "Abandoned meditation ashram where The Beatles stayed in 1968 — now a cultural landmark")
                         .category("Monument").rating(4.5).timings("9AM-4PM").entryFee("₹150")
-                        .imageUrl("https://images.unsplash.com/photo-1591018653367-4e5fa7464027?w=400").city(rishikesh)
+                        .imageUrl("https://imgs.search.brave.com/dFgjtQnbnbTcF_t-GaBPtKfSAKQ1Vo4lYiS7779YB2U/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAzLzc0LzgyLzk2/LzM2MF9GXzM3NDgy/OTYwNl9iUjc4SHZk/MmJQOU1udDdEZzZZ/Ym9WdTQyT2hPMk9j/VS5qcGc").city(rishikesh)
                         .build(),
                 Place.builder().name("Triveni Ghat")
                         .description("Sacred bathing ghat at the confluence of three rivers — evening Ganga Aarti")
                         .category("Temple").rating(4.7).timings("5AM-9PM").entryFee("Free")
-                        .imageUrl("https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=400").city(rishikesh)
+                        .imageUrl("https://imgs.search.brave.com/OCCFJjUlh9s5s446mYkGZJO1-2AzygW8S798FhESkNc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lbGVt/ZW50cy1yZXNpemVk/LmVudmF0b3VzZXJj/b250ZW50LmNvbS9l/bGVtZW50cy12aWRl/by1jb3Zlci1pbWFn/ZXMvYWI3ZTRhZTQt/MTVmZS00ZjA1LTg1/ZjItMDFiMDM1MDk4/NDFlL3ZpZGVvX3By/ZXZpZXcvdmlkZW9f/cHJldmlld18wMDAw/LmpwZz93PTUwMCZj/Zl9maXQ9Y292ZXIm/cT04NSZmb3JtYXQ9/YXV0byZzPTc3NzA3/YmY3ZDJiOTU2NWI5/NDc1YzIzYjg5NGYw/Yjk2MDI5ZDc3MDgx/YjA4ODY3Y2MzNGU1/MTE0NmYwZGRjNTc").city(rishikesh)
                         .build()));
         hotelRepository.saveAll(List.of(
                 Hotel.builder().name("Aloha on the Ganges").type("4 Star").nearPlace("Laxman Jhula").rating(4.6)
@@ -470,12 +470,12 @@ public class DataSeeder implements CommandLineRunner {
                 Food.builder().name("Aloo Puri").price(60).isVeg(true).rating(4.4)
                         .description("Deep-fried bread with spiced potato curry — classic North Indian breakfast")
                         .category("Street Food").restaurant("Chotiwala, Swarg Ashram").priceRange("₹50-80")
-                        .mustTry(true).imageUrl("https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400")
+                        .mustTry(true).imageUrl("https://imgs.search.brave.com/tVtJ97tsZPNUDndmDQmL9FVpd6or3-aGfN8wV4nRpRE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9k/ZWxpY2lvdXMtcGxh/dGUtY2hvbGUtYmhh/dHVyZS1pbmRpYW4t/Y3VsaW5hcnktZGVs/aWdodF8yMy0yMTUx/OTk4NTg1LmpwZz9z/ZW10PWFpc19oeWJy/aWQmdz03NDAmcT04/MA")
                         .city(rishikesh).build(),
                 Food.builder().name("Fresh Fruit Smoothie Bowl").price(200).isVeg(true).rating(4.2)
                         .description("Healthy organic bowls with seasonal Himalayan fruits — yoga town favourite")
                         .category("Drink").restaurant("The 60's Cafe").priceRange("₹150-250").mustTry(false)
-                        .imageUrl("https://images.unsplash.com/photo-1511690743698-d9d18ce0e236?w=400").city(rishikesh)
+                        .imageUrl("https://imgs.search.brave.com/ozgAkJ0ZxtYBi6Qzjx4YkqKg8H_Rl4SSPZOatr7yB5M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNjAv/MTE3LzE3Ni9zbWFs/bC9yZWZyZXNoaW5n/LWhlYWx0aHktZnJ1/aXQtc21vb3RoaWVz/LW1hZGUtd2l0aC1m/cmVzaC1mcnVpdHMt/dmVnZXRhYmxlcy1w/aG90by5qcGc").city(rishikesh)
                         .build()));
 
         // --- Mysore ---
@@ -489,14 +489,14 @@ public class DataSeeder implements CommandLineRunner {
         placeRepository.saveAll(List.of(Place.builder().name("Mysore Palace")
                 .description("Magnificent royal palace with Indo-Saracenic architecture, lit with 100,000 bulbs")
                 .category("Palace").rating(4.8).timings("10AM-5:30PM").entryFee("₹70")
-                .imageUrl("https://images.unsplash.com/photo-1600100397608-e4b8e5a2f4b0?w=400").city(mysore).build()));
+                .imageUrl("https://imgs.search.brave.com/cS9OzF-jouM97nWNi_XGRqYjK_LGLANh-RgEajBxKIo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vdGhldW5z/dHVtYmxlZC5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjUv/MDkvTXlzb3JlLURh/c2FyYS0yMDI1Lmpw/Zz9maXQ9MTIwMCw4/MDAmc3NsPTE").city(mysore).build()));
         hotelRepository.save(Hotel.builder().name("Radisson Blu Plaza Mysore").type("5 Star").nearPlace("Mysore Palace")
                 .rating(4.5).pricePerNight(6500).amenities("WiFi,Pool,Restaurant,Gym")
                 .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(mysore).build());
         foodRepository.save(Food.builder().name("Mysore Pak").price(120).isVeg(true).rating(4.6)
                 .description("Iconic ghee-rich sweet made from besan — invented in the Mysore Palace kitchen")
                 .category("Sweet").restaurant("Guru Sweet Mart").priceRange("₹80-200").mustTry(true)
-                .imageUrl("https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400").city(mysore).build());
+                .imageUrl("https://imgs.search.brave.com/i_QXW4GvMU8N_XlMrm5ilboWa7-TPT_3Akpr4qEoJtw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdDEu/bGF0ZXN0bHkuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzA1L015c29yZS1Q/YWstUGhvdG8tMi5q/cGc").city(mysore).build());
 
         // --- Amritsar ---
         City amritsar = cityRepository.save(City.builder().name("Amritsar").state("Punjab").tagline("Golden Glory")
@@ -510,11 +510,11 @@ public class DataSeeder implements CommandLineRunner {
                 .imageUrl("https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=400").city(amritsar).build());
         hotelRepository.save(Hotel.builder().name("Hyatt Amritsar").type("5 Star").nearPlace("Golden Temple")
                 .rating(4.6).pricePerNight(8000).amenities("WiFi,Pool,Spa,Restaurant")
-                .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(amritsar).build());
+                .imageUrl("https://imgs.search.brave.com/1o-3aQNNcFgjex0do2dJ4-u8m1V4gm7aR1k_1gjJqdw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudHJ2bC1tZWRp/YS5jb20vbG9kZ2lu/Zy8zMDAwMDAwLzIz/OTAwMDAvMjM4NDQw/MC8yMzg0MzgzLzc3/MWVhYjkzLmpwZz9p/bXBvbGljeT1yZXNp/emVjcm9wJnJ3PTI5/NyZyYT1maXQ").city(amritsar).build());
         foodRepository.save(Food.builder().name("Amritsari Kulcha").price(100).isVeg(true).rating(4.7)
                 .description("Stuffed flatbread with spiced potato filling, served with chole — Punjab's pride")
                 .category("Street Food").restaurant("Kesar Da Dhaba").priceRange("₹80-150").mustTry(true)
-                .imageUrl("https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400").city(amritsar).build());
+                .imageUrl("https://imgs.search.brave.com/xl0u7-pHoo8Q_SVAhpV-q9AQjSCcTAKYtSL9TsBgOpE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9yZXMu/Y2xvdWRpbmFyeS5j/b20vcHVybmVzaC9p/bWFnZS91cGxvYWQv/d18xMDAwLGZfYXV0/byxxX2F1dG86ZWNv/LGNfbGltaXQvYWxs/LWluZGlhLWZhbW91/cy1hbXJpdHNhcmkt/a3VsY2hhNDQxODIu/anBn").city(amritsar).build());
 
         // --- Darjeeling ---
         City darjeeling = cityRepository.save(City.builder().name("Darjeeling").state("West Bengal")
@@ -528,11 +528,11 @@ public class DataSeeder implements CommandLineRunner {
         placeRepository.save(Place.builder().name("Tiger Hill")
                 .description("Best viewpoint for sunrise over Kanchenjunga — 3rd highest peak in the world")
                 .category("Nature").rating(4.7).timings("4AM-6AM").entryFee("₹30")
-                .imageUrl("https://images.unsplash.com/photo-1622308644420-57e18789e738?w=400").city(darjeeling)
+                .imageUrl("https://imgs.search.brave.com/NIRHC-z_dYkXS-jNge2QvQLd3r3OQL_h40fNegEAnbo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zN2Fw/MS5zY2VuZTcuY29t/L2lzL2ltYWdlL2lu/Y3JlZGlibGVpbmRp/YS90aWdlci1oaWxs/LWRhcmplZWxpbmct/d2VzdC1iZW5nYWwt/My1hdHRyLWhlcm8_/cWx0PTgyJnRzPTE3/MjY2NDMxODkyNDg").city(darjeeling)
                 .build());
         hotelRepository.save(Hotel.builder().name("Mayfair Darjeeling").type("4 Star").nearPlace("Mall Road")
                 .rating(4.5).pricePerNight(7500).amenities("WiFi,Restaurant,Mountain View,Fireplace")
-                .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(darjeeling)
+                .imageUrl("https://imgs.search.brave.com/VzTWE4bfTXj7NRbmefK10Rwzc3EPvUG3T0iY2Gb0-ew/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc2ltcGxvdGVs/LmNvbS9zaW1wbG90/ZWwvaW1hZ2UvdXBs/b2FkL3hfMCx5Xzc0/LHdfMTUwMCxoXzg0/NCxyXzAsY19jcm9w/L3FfODAsd185MDAs/ZHByXzEsZl9hdXRv/LGZsX3Byb2dyZXNz/aXZlLGNfbGltaXQv/bWF5ZmFpci1oaWxs/LXJlc29ydC1kYXJq/ZWVsaW5nL0VYVDJf/d3UzemR5").city(darjeeling)
                 .build());
         foodRepository.save(Food.builder().name("Darjeeling Momos").price(80).isVeg(false).rating(4.5)
                 .description("Steamed dumplings stuffed with pork or vegetables — Himalayan soul food")

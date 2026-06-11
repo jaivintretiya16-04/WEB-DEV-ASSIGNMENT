@@ -23,6 +23,7 @@ public class Place {
 
     private Double rating;
 
+    @Column(length = 2048)
     private String imageUrl;
 
     private String timings;

@@ -27,6 +27,7 @@ public class User {
 
     private String phone;
 
+    @Column(length = 2048)
     private String avatarUrl;
 
     @Enumerated(EnumType.STRING)
