@@ -34,122 +34,51 @@ public class DataSeeder implements CommandLineRunner {
 
     private void seedCities() {
         // --- Jaipur ---
-        City jaipur = cityRepository.save(City.builder().name("Jaipur").state("Rajasthan").tagline("The Pink City")
-                .description("Royal heritage and vibrant culture").category("Heritage").rating(4.7).bestTime("Oct-Mar")
-                .language("Hindi, Rajasthani")
-                .imageUrl("https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800").build());
+        City jaipur = cityRepository.save(City.builder().name("Jaipur").state("Rajasthan").tagline("The Pink City").description("Royal heritage and vibrant culture").category("Heritage").rating(4.7).bestTime("Oct-Mar").language("Hindi, Rajasthani").imageUrl("https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800").build());
         placeRepository.saveAll(List.of(
-                Place.builder().name("Amber Fort").description("Majestic hilltop fort with stunning architecture")
-                        .category("Fort").rating(4.8).timings("8AM-5:30PM").entryFee("₹200")
-                        .imageUrl("https://images.unsplash.com/photo-1599661046289-e31897846e41?w=400").city(jaipur)
-                        .build(),
-                Place.builder().name("Hawa Mahal").description("Iconic Palace of Winds with 953 windows")
-                        .category("Monument").rating(4.6).timings("9AM-5PM").entryFee("₹50")
-                        .imageUrl("https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400").city(jaipur)
-                        .build(),
-                Place.builder().name("City Palace").description("Blend of Rajasthani and Mughal architecture")
-                        .category("Monument").rating(4.5).timings("9:30AM-5PM").entryFee("₹300")
-                        .imageUrl("https://images.unsplash.com/photo-1574489542815-b4c1d813e5a5?w=400").city(jaipur)
-                        .build()));
+            Place.builder().name("Amber Fort").description("Majestic hilltop fort with stunning architecture").category("Fort").rating(4.8).timings("8AM-5:30PM").entryFee("₹200").imageUrl("https://plus.unsplash.com/premium_photo-1661963054563-ce928e477ff3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YW1iZXIlMjBmb3J0fGVufDB8fDB8fHww").city(jaipur).build(),
+            Place.builder().name("Hawa Mahal").description("Iconic Palace of Winds with 953 windows").category("Monument").rating(4.6).timings("9AM-5PM").entryFee("₹50").imageUrl("https://images.unsplash.com/photo-1602643163983-ed0babc39797?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGF3YSUyMG1haGFsfGVufDB8fDB8fHww").city(jaipur).build(),
+            Place.builder().name("City Palace").description("Blend of Rajasthani and Mughal architecture").category("Monument").rating(4.5).timings("9:30AM-5PM").entryFee("₹300").imageUrl("https://images.unsplash.com/photo-1589901164570-f9de6556e1c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2l0eSUyMHBhbGFjZXxlbnwwfHwwfHx8MA%3D%3D").city(jaipur).build()
+        ));
         hotelRepository.saveAll(List.of(
-                Hotel.builder().name("Rambagh Palace").type("5 Star").nearPlace("City Palace").rating(4.9)
-                        .pricePerNight(25000).amenities("WiFi,Pool,Spa,Restaurant,Heritage")
-                        .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(jaipur)
-                        .build(),
-                Hotel.builder().name("ITC Rajputana").type("5 Star").nearPlace("Hawa Mahal").rating(4.7)
-                        .pricePerNight(8500).amenities("WiFi,Pool,Restaurant,Gym")
-                        .imageUrl("https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=400").city(jaipur)
-                        .build(),
-                Hotel.builder().name("Hotel Pearl Palace").type("Budget").nearPlace("Hawa Mahal").rating(4.4)
-                        .pricePerNight(1500).amenities("WiFi,Restaurant,AC")
-                        .imageUrl("https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400").city(jaipur)
-                        .build()));
+            Hotel.builder().name("Rambagh Palace").type("5 Star").nearPlace("City Palace").rating(4.9).pricePerNight(25000).amenities("WiFi,Pool,Spa,Restaurant,Heritage").imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(jaipur).build(),
+            Hotel.builder().name("ITC Rajputana").type("5 Star").nearPlace("Hawa Mahal").rating(4.7).pricePerNight(8500).amenities("WiFi,Pool,Restaurant,Gym").imageUrl("https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=400").city(jaipur).build(),
+            Hotel.builder().name("Hotel Pearl Palace").type("Budget").nearPlace("Hawa Mahal").rating(4.4).pricePerNight(1500).amenities("WiFi,Restaurant,AC").imageUrl("https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400").city(jaipur).build()
+        ));
         foodRepository.saveAll(List.of(
-                Food.builder().name("Dal Baati Churma").price(350).isVeg(true).rating(4.6)
-                        .description("Traditional Rajasthani baked wheat balls with lentils").category("Main Course")
-                        .restaurant("Chokhi Dhani").priceRange("₹300-500").mustTry(true)
-                        .imageUrl("https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400").city(jaipur)
-                        .build(),
-                Food.builder().name("Pyaaz Kachori").price(45).isVeg(true).rating(4.7)
-                        .description("Crispy deep-fried pastry with spiced onion filling").category("Street Food")
-                        .restaurant("Rawat Mishthan Bhandar").priceRange("₹30-60").mustTry(true)
-                        .imageUrl("https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400").city(jaipur)
-                        .build(),
-                Food.builder().name("Ghewar").price(180).isVeg(true).rating(4.3)
-                        .description("Traditional Rajasthani disc-shaped sweet cake").category("Sweet")
-                        .restaurant("LMB").priceRange("₹100-300").mustTry(false)
-                        .imageUrl("https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400").city(jaipur)
-                        .build()));
+            Food.builder().name("Dal Baati Churma").price(350).isVeg(true).rating(4.6).description("Traditional Rajasthani baked wheat balls with lentils").category("Main Course").restaurant("Chokhi Dhani").priceRange("₹300-500").mustTry(true).imageUrl("https://media.istockphoto.com/id/1458973879/photo/rajasthani-traditional-cuisine-dal-baati.jpg?s=1024x1024&w=is&k=20&c=Et1no8evm3pU9qnZRFQQoC9gBox0oD5DFLSiqcKzC6g=").city(jaipur).build(),
+            Food.builder().name("Pyaaz Kachori").price(45).isVeg(true).rating(4.7).description("Crispy deep-fried pastry with spiced onion filling").category("Street Food").restaurant("Rawat Mishthan Bhandar").priceRange("₹30-60").mustTry(true).imageUrl("https://media.istockphoto.com/id/1080619592/photo/shegaon-or-rajasthani-kachori-served-with-green-chutney-and-tomato-ketchup.webp?a=1&b=1&s=612x612&w=0&k=20&c=KCUPwLhwq7dP4NF9LHSgVzAIPnnNIannj370-7r-qH8=").city(jaipur).build(),
+            Food.builder().name("Ghewar").price(180).isVeg(true).rating(4.3).description("Traditional Rajasthani disc-shaped sweet cake").category("Sweet").restaurant("LMB").priceRange("₹100-300").mustTry(false).imageUrl("https://media.istockphoto.com/id/845078294/photo/rajasthani-ghevar-or-ghewar-indian-sweets.jpg?s=1024x1024&w=is&k=20&c=VdhwrcJTByZMi0X_RTHtlm_2D3brc7U92rFIEbRYbAM=").city(jaipur).build()
+        ));
 
         // --- Goa ---
-        City goa = cityRepository.save(City.builder().name("Goa").state("Goa").tagline("Sun, Sand & Serenity")
-                .description("India's beach paradise with Portuguese charm").category("Beach").rating(4.6)
-                .bestTime("Nov-Feb").language("Konkani, English")
-                .imageUrl("https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800").build());
+        City goa = cityRepository.save(City.builder().name("Goa").state("Goa").tagline("Sun, Sand & Serenity").description("India's beach paradise with Portuguese charm").category("Beach").rating(4.6).bestTime("Nov-Feb").language("Konkani, English").imageUrl("https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=800").build());
         placeRepository.saveAll(List.of(
-                Place.builder().name("Baga Beach").description("Popular beach with water sports and nightlife")
-                        .category("Beach").rating(4.5).timings("24 Hours").entryFee("Free")
-                        .imageUrl("https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400").city(goa)
-                        .build(),
-                Place.builder().name("Basilica of Bom Jesus")
-                        .description("UNESCO World Heritage Site, Portuguese architecture").category("Monument")
-                        .rating(4.7).timings("9AM-6:30PM").entryFee("Free")
-                        .imageUrl("https://images.unsplash.com/photo-1587922546307-776227941871?w=400").city(goa)
-                        .build()));
+            Place.builder().name("Baga Beach").description("Popular beach with water sports and nightlife").category("Beach").rating(4.5).timings("24 Hours").entryFee("Free").imageUrl("https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=400").city(goa).build(),
+            Place.builder().name("Basilica of Bom Jesus").description("UNESCO World Heritage Site, Portuguese architecture").category("Monument").rating(4.7).timings("9AM-6:30PM").entryFee("Free").imageUrl("https://images.unsplash.com/photo-1768728678060-598c3b983b3f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2l0eSUyMHBhbGFjZXxlbnwwfHwwfHx8MA%3D%3D").city(goa).build()
+        ));
         hotelRepository.saveAll(List.of(
-                Hotel.builder().name("Taj Exotica").type("5 Star").nearPlace("Baga Beach").rating(4.8)
-                        .pricePerNight(15000).amenities("WiFi,Pool,Spa,Beach Access,Restaurant")
-                        .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(goa)
-                        .build(),
-                Hotel.builder().name("OYO Beach Stay").type("Budget").nearPlace("Baga Beach").rating(3.9)
-                        .pricePerNight(1200).amenities("WiFi,AC")
-                        .imageUrl("https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400").city(goa)
-                        .build()));
+            Hotel.builder().name("Taj Exotica").type("5 Star").nearPlace("Baga Beach").rating(4.8).pricePerNight(15000).amenities("WiFi,Pool,Spa,Beach Access,Restaurant").imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(goa).build(),
+            Hotel.builder().name("OYO Beach Stay").type("Budget").nearPlace("Baga Beach").rating(3.9).pricePerNight(1200).amenities("WiFi,AC").imageUrl("https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400").city(goa).build()
+        ));
         foodRepository.saveAll(List.of(
-                Food.builder().name("Goan Fish Curry").price(450).isVeg(false).rating(4.5)
-                        .description("Tangy coconut-based fish curry").category("Main Course")
-                        .restaurant("Fisherman's Wharf").priceRange("₹400-600").mustTry(true)
-                        .imageUrl("https://images.unsplash.com/photo-1574484284002-952d92456975?w=400").city(goa)
-                        .build(),
-                Food.builder().name("Bebinca").price(200).isVeg(true).rating(4.4)
-                        .description("Traditional Goan layered pudding dessert").category("Sweet")
-                        .restaurant("Cafe Bodega").priceRange("₹150-250").mustTry(true)
-                        .imageUrl("https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400").city(goa)
-                        .build()));
+            Food.builder().name("Goan Fish Curry").price(450).isVeg(false).rating(4.5).description("Tangy coconut-based fish curry").category("Main Course").restaurant("Fisherman's Wharf").priceRange("₹400-600").mustTry(true).imageUrl("https://images.unsplash.com/photo-1654863404432-cac67587e25d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z29hbiUyMGZpc2glMjBjdXJyeXxlbnwwfHwwfHx8MA%3D%3D").city(goa).build(),
+            Food.builder().name("Bebinca").price(200).isVeg(true).rating(4.4).description("Traditional Goan layered pudding dessert").category("Sweet").restaurant("Cafe Bodega").priceRange("₹150-250").mustTry(true).imageUrl("https://media.istockphoto.com/id/1352250764/photo/bebinka-on-platter-close-up-bibik-a-national-dessert-in-goa-india-multi-layer-sweet-pudding.jpg?s=1024x1024&w=is&k=20&c=NMaZOBuq0y9E56TdxFVLoavdvyzJE2LYllAzSxCBxbs=").city(goa).build()
+        ));
 
         // --- Varanasi ---
-        City varanasi = cityRepository.save(City.builder().name("Varanasi").state("Uttar Pradesh")
-                .tagline("City of Light").description("India's spiritual capital on the Ganges").category("Heritage")
-                .rating(4.5).bestTime("Oct-Mar").language("Hindi")
-                .imageUrl(
-                        "https://media.istockphoto.com/id/827065008/photo/holy-town-varanasi-and-the-river-ganges.webp?a=1&b=1&s=612x612&w=0&k=20&c=QtEgeqRAUw0e45r54qW9I79H0hxqk0_3klw_B3xD_rY=")
-                .build());
+        City varanasi = cityRepository.save(City.builder().name("Varanasi").state("Uttar Pradesh").tagline("City of Light").description("India's spiritual capital on the Ganges").category("Heritage").rating(4.5).bestTime("Oct-Mar").language("Hindi").imageUrl("https://media.istockphoto.com/id/827065008/photo/holy-town-varanasi-and-the-river-ganges.webp?a=1&b=1&s=612x612&w=0&k=20&c=QtEgeqRAUw0e45r54qW9I79H0hxqk0_3klw_B3xD_rY=").build());
         placeRepository.saveAll(List.of(
-                Place.builder().name("Dashashwamedh Ghat").description("Main ghat famous for Ganga Aarti ceremony")
-                        .category("Temple").rating(4.8).timings("24 Hours").entryFee("Free")
-                        .imageUrl("https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=400").city(varanasi)
-                        .build(),
-                Place.builder().name("Kashi Vishwanath Temple")
-                        .description("One of the 12 Jyotirlingas, sacred Shiva temple").category("Temple").rating(4.9)
-                        .timings("3AM-11PM").entryFee("Free")
-                        .imageUrl("https://images.unsplash.com/photo-1627894483216-2138af692e32?w=400").city(varanasi)
-                        .build()));
+            Place.builder().name("Dashashwamedh Ghat").description("Main ghat famous for Ganga Aarti ceremony").category("Temple").rating(4.8).timings("24 Hours").entryFee("Free").imageUrl("https://images.unsplash.com/photo-1772947314926-a3bcffd09b1b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fERhc2hhc2h3YW1lZGglMjBHaGF0fGVufDB8fDB8fHww").city(varanasi).build(),
+            Place.builder().name("Kashi Vishwanath Temple").description("One of the 12 Jyotirlingas, sacred Shiva temple").category("Temple").rating(4.9).timings("3AM-11PM").entryFee("Free").imageUrl("https://images.pexels.com/photos/37349120/pexels-photo-37349120.jpeg?_gl=1*pkll2*_ga*MTM2MjUyNzE5MS4xNzY3NzM0ODg2*_ga_8JE65Q40S6*czE3ODExODcwMDMkbzIkZzEkdDE3ODExODcwMTgkajQ1JGwwJGgw").city(varanasi).build()
+        ));
         hotelRepository.saveAll(List.of(
-                Hotel.builder().name("Taj Ganges").type("5 Star").nearPlace("Dashashwamedh Ghat").rating(4.6)
-                        .pricePerNight(7500).amenities("WiFi,Pool,Restaurant,Spa")
-                        .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(varanasi)
-                        .build()));
+            Hotel.builder().name("Taj Ganges").type("5 Star").nearPlace("Dashashwamedh Ghat").rating(4.6).pricePerNight(7500).amenities("WiFi,Pool,Restaurant,Spa").imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(varanasi).build()
+        ));
         foodRepository.saveAll(List.of(
-                Food.builder().name("Banarasi Paan").price(50).isVeg(true).rating(4.8)
-                        .description("Iconic betel leaf preparation with sweet fillings").category("Street Food")
-                        .restaurant("Keshav Paan Bhandar").priceRange("₹20-100").mustTry(true)
-                        .imageUrl("https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400").city(varanasi)
-                        .build(),
-                Food.builder().name("Tamatar Chaat").price(40).isVeg(true).rating(4.5)
-                        .description("Unique tomato-based chaat found only in Varanasi").category("Street Food")
-                        .restaurant("Deena Chaat").priceRange("₹30-50").mustTry(true)
-                        .imageUrl("https://images.unsplash.com/photo-1606491956689-2ea866880049?w=400").city(varanasi)
-                        .build()));
+            Food.builder().name("Banarasi Paan").price(50).isVeg(true).rating(4.8).description("Iconic betel leaf preparation with sweet fillings").category("Street Food").restaurant("Keshav Paan Bhandar").priceRange("₹20-100").mustTry(true).imageUrl("https://media.istockphoto.com/id/2050809955/photo/sweet-paan-meetha-pan-betel-leaves-mouth-freshener-traditional-indian-dessert-paan-made-with.webp?a=1&b=1&s=612x612&w=0&k=20&c=CV-T3SC6GSgUvYRuSkzlFuZbS2VVT-qcquK2HI6P26E=").city(varanasi).build(),
+            Food.builder().name("Tamatar Chaat").price(40).isVeg(true).rating(4.5).description("Unique tomato-based chaat found only in Varanasi").category("Street Food").restaurant("Deena Chaat").priceRange("₹30-50").mustTry(true).imageUrl("https://images.unsplash.com/photo-1591031107640-45556bbac5f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGFtYXRhciUyMGNoYXR8ZW58MHx8MHx8fDA%3D").city(varanasi).build()
+        ));
 
         // --- Manali ---
         City manali = cityRepository.save(City.builder().name("Manali").state("Himachal Pradesh")
@@ -677,14 +606,14 @@ public class DataSeeder implements CommandLineRunner {
         placeRepository.save(Place.builder().name("Pangong Lake")
                 .description("Stunning 134km high-altitude lake changing colors through the day — featured in 3 Idiots")
                 .category("Nature").rating(4.9).timings("24 Hours").entryFee("₹400 (permit)")
-                .imageUrl("https://images.unsplash.com/photo-1626015365107-aa59f5e58e34?w=400").city(leh).build());
+                .imageUrl("https://images.unsplash.com/photo-1606857090627-27ca46667290?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFuZ29uZyUyMGxha2V8ZW58MHx8MHx8fDA%3D").city(leh).build());
         hotelRepository.save(Hotel.builder().name("The Grand Dragon Ladakh").type("4 Star").nearPlace("Leh Market")
                 .rating(4.5).pricePerNight(8000).amenities("WiFi,Restaurant,Mountain View")
                 .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(leh).build());
         foodRepository.save(Food.builder().name("Thukpa").price(150).isVeg(false).rating(4.5)
                 .description("Hearty Ladakhi noodle soup with vegetables and meat — perfect for high altitude")
                 .category("Main Course").restaurant("Tibetan Kitchen").priceRange("₹100-200").mustTry(true)
-                .imageUrl("https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?w=400").city(leh).build());
+                .imageUrl("https://media.istockphoto.com/id/2263127123/photo/fresh-keema-noodles-topped-with-minced-meat-and-vegetables-served-at-a-local-eatery-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=SifbLhFD49ztDnqewkQFhCWtZgLbLIsGFH0tu52A3rM=").city(leh).build());
 
         // --- Jodhpur ---
         City jodhpur = cityRepository.save(City.builder().name("Jodhpur").state("Rajasthan").tagline("The Blue City")
@@ -697,7 +626,7 @@ public class DataSeeder implements CommandLineRunner {
         placeRepository.save(Place.builder().name("Mehrangarh Fort")
                 .description("One of India's largest forts perched 125m above the city — museums and panoramic views")
                 .category("Fort").rating(4.8).timings("9AM-5PM").entryFee("₹100")
-                .imageUrl("https://images.unsplash.com/photo-1590517862768-5e1a5e4f7e7e?w=400").city(jodhpur).build());
+                .imageUrl("https://images.unsplash.com/photo-1567771971104-545efaf89ddb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWVocmFuZ2FyaCUyMGZvcnR8ZW58MHx8MHx8fDA%3D").city(jodhpur).build());
         hotelRepository.save(Hotel.builder().name("Umaid Bhawan Palace").type("5 Star Heritage")
                 .nearPlace("Mehrangarh Fort").rating(4.9).pricePerNight(38000)
                 .amenities("WiFi,Pool,Spa,Restaurant,Heritage")
@@ -705,7 +634,7 @@ public class DataSeeder implements CommandLineRunner {
         foodRepository.save(Food.builder().name("Mirchi Bada").price(30).isVeg(true).rating(4.4)
                 .description("Deep-fried green chili fritter stuffed with spicy potato filling — fiery street snack")
                 .category("Street Food").restaurant("Shahi Samosa").priceRange("₹20-40").mustTry(true)
-                .imageUrl("https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400").city(jodhpur).build());
+                .imageUrl("https://media.istockphoto.com/id/1323631715/photo/indian-street-food-snacks-mirchi-bhaji-pakora-and-bonda-in-market.webp?a=1&b=1&s=612x612&w=0&k=20&c=MnlldW9inUSjhxDulVZbmAvxsGUfwnjxWKN_wgji9eY=").city(jodhpur).build());
 
         // --- Hampi ---
         City hampi = cityRepository.save(City.builder().name("Hampi").state("Karnataka").tagline("City of Ruins")
@@ -716,14 +645,14 @@ public class DataSeeder implements CommandLineRunner {
         placeRepository.save(Place.builder().name("Virupaksha Temple")
                 .description("Ancient functioning temple at the heart of Hampi ruins — over 700 years old")
                 .category("Temple").rating(4.8).timings("6AM-6PM").entryFee("₹25")
-                .imageUrl("https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?w=400").city(hampi).build());
+                .imageUrl("https://images.unsplash.com/photo-1764426382316-14d5c2fd25b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHZpcnVwYWtzaGElMjB0ZW1wbGV8ZW58MHx8MHx8fDA%3D").city(hampi).build());
         hotelRepository.save(Hotel.builder().name("Evolve Back Hampi").type("5 Star").nearPlace("Virupaksha Temple")
                 .rating(4.7).pricePerNight(18000).amenities("WiFi,Pool,Spa,Restaurant,Heritage")
                 .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(hampi).build());
         foodRepository.save(Food.builder().name("Thali Meals").price(150).isVeg(true).rating(4.5)
                 .description("South Indian unlimited thali with rice, sambar, rasam, papad, and local curries")
                 .category("Main Course").restaurant("Mango Tree Restaurant").priceRange("₹100-200").mustTry(true)
-                .imageUrl("https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400").city(hampi).build());
+                .imageUrl("https://media.istockphoto.com/id/473582820/photo/nepali-thali-meal-set-with-mutton-curry.webp?a=1&b=1&s=612x612&w=0&k=20&c=hEym_euZ6oS8CU7D9fiomM9KmiZIJWvBLErYiRZRpAc=").city(hampi).build());
 
         // --- Coorg ---
         City coorg = cityRepository.save(City.builder().name("Coorg").state("Karnataka").tagline("Scotland of India")
@@ -734,14 +663,14 @@ public class DataSeeder implements CommandLineRunner {
         placeRepository.save(Place.builder().name("Abbey Falls")
                 .description("Beautiful 21m waterfall surrounded by coffee and spice plantations").category("Nature")
                 .rating(4.4).timings("9AM-5PM").entryFee("₹15")
-                .imageUrl("https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=400").city(coorg).build());
+                .imageUrl("https://images.unsplash.com/flagged/photo-1592544858330-7ac10a0468e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWJiZXklMjBmYWxsc3xlbnwwfHwwfHx8MA%3D%3D").city(coorg).build());
         hotelRepository.save(Hotel.builder().name("Tamara Coorg").type("5 Star").nearPlace("Abbey Falls").rating(4.7)
                 .pricePerNight(16000).amenities("WiFi,Pool,Spa,Restaurant,Mountain View")
                 .imageUrl("https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400").city(coorg).build());
         foodRepository.save(Food.builder().name("Pandi Curry").price(300).isVeg(false).rating(4.6)
                 .description("Coorg's signature pork curry cooked with local Kachampuli vinegar — rich and tangy")
                 .category("Main Course").restaurant("Coorg Cuisine").priceRange("₹200-400").mustTry(true)
-                .imageUrl("https://images.unsplash.com/photo-1574484284002-952d92456975?w=400").city(coorg).build());
+                .imageUrl("https://plus.unsplash.com/premium_photo-1723708871094-2c02cf5f5394?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGFuZGklMjBjdXJyeXxlbnwwfHwwfHx8MA%3D%3D").city(coorg).build());
 
         // --- Andaman ---
         City andaman = cityRepository.save(City.builder().name("Andaman").state("Andaman & Nicobar")
